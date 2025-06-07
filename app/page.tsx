@@ -41,46 +41,46 @@ function Home() {
 
     const accToken = Cookies.get("access_token");
     const idToken = Cookies.get("id_token");
- setViewChart(true);
-    // if (!accToken || !idToken) {
-    //   const code: string | null = (searchParams.get('code') || null);
-    //   console.log("code", code);
-    //   if (code) {
-    //     console.log(code, "code")
-    //     axios({
-    //       method: "POST",
-    //       url: process.env.NEXT_PUBLIC_AUTH_URL + "oauth2/token",
-    //       params: {
-    //         grant_type: "authorization_code",
-    //         client_id: process.env.NEXT_PUBLIC_AWS_USERPOOL_WEB_CLIENT_ID,
-    //         redirect_uri: process.env.NEXT_PUBLIC_AWS_CLOUD_FRONT_URL,
-    //         code: code,
-    //       },
-    //       data: {},
-    //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //     }).then((resp) => {
-    //       try {
-    //         console.log("resp", resp);
-    //         Cookies.set("access_token", resp.data["access_token"]);
-    //         Cookies.set("id_token", resp.data["id_token"]);
-    //         setViewChart(true);
-    //         //const decoded = jwtDecode(resp.data.id_token);
-    //         //  fetchuser(resp, decoded);
-    //       } catch (error) {
-    //         console.error("Error decoding JWT:", error);
-    //         //pageload();
-    //       }
-    //     }).catch((error) => {
-    //       console.error("Error Config:", error);
-    //       // pageload();
-    //     });
-    //   } else {
-    //     setViewChart(false);
-    //     pageload();
-    //   }
-    // } else {
-    //   setViewChart(true);
-    // }
+    //setViewChart(true);
+    if (!accToken || !idToken) {
+      const code: string | null = (searchParams.get('code') || null);
+      console.log("code", code);
+      if (code) {
+        console.log(code, "code")
+        axios({
+          method: "POST",
+          url: process.env.NEXT_PUBLIC_AUTH_URL + "oauth2/token",
+          params: {
+            grant_type: "authorization_code",
+            client_id: process.env.NEXT_PUBLIC_AWS_USERPOOL_WEB_CLIENT_ID,
+            redirect_uri: process.env.NEXT_PUBLIC_AWS_CLOUD_FRONT_URL,
+            code: code,
+          },
+          data: {},
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        }).then((resp) => {
+          try {
+            console.log("resp", resp);
+            Cookies.set("access_token", resp.data["access_token"]);
+            Cookies.set("id_token", resp.data["id_token"]);
+            setViewChart(true);
+            //const decoded = jwtDecode(resp.data.id_token);
+            //  fetchuser(resp, decoded);
+          } catch (error) {
+            console.error("Error decoding JWT:", error);
+            //pageload();
+          }
+        }).catch((error) => {
+          console.error("Error Config:", error);
+          // pageload();
+        });
+      } else {
+        setViewChart(false);
+        pageload();
+      }
+    } else {
+      setViewChart(true);
+    }
   }
 
   return (
