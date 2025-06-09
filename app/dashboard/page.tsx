@@ -14,7 +14,7 @@ interface IJwtObject {
 export default function Home() {
   const [selectedAssistant, setSelectedAssistant] = useState<any | null>(null);
   const [showCards, setShowCards] = useState(true);
-    const [useremail, setUserEmail] = useState<string | null>(null);
+    const [useremail, setUserEmail] = useState(string);
 
   useEffect(() => {
     const id_token: string = Cookies.get("id_token") || '';
@@ -27,10 +27,10 @@ console.log("id_token", id_token);
     try {
       const decoded: IJwtObject = jwtDecode(id_token);
       console.log("id_token", decoded);
-      etUserEmail(decoded.email ?? null);
+      setUserEmail(decoded.email ?? '');
       if (!decoded || !decoded.email) {
         console.log("id_token", decoded);
-      setUserEmail(decoded.email ?? null);
+      setUserEmail(decoded.email ?? '');
         return;
       }
     } catch (error) {
