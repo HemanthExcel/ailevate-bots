@@ -23,10 +23,11 @@ export default function Home() {
 
       return;
     }
-
+console.log("id_token", id_token);
     try {
       const decoded: IJwtObject = jwtDecode(id_token);
       if (!decoded || !decoded.email) {
+        console.log("id_token", decoded);
       setUserEmail(decoded.email ?? null);
         return;
       }
