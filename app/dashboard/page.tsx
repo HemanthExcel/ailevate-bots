@@ -14,6 +14,7 @@ interface IJwtObject {
 export default function Home() {
   const [selectedAssistant, setSelectedAssistant] = useState<any | null>(null);
   const [showCards, setShowCards] = useState(true);
+    const [useremail, setUserEmail] = useState<string | null>(null);
 
   useEffect(() => {
     const id_token: string = Cookies.get("id_token") || '';
@@ -26,7 +27,7 @@ export default function Home() {
     try {
       const decoded: IJwtObject = jwtDecode(id_token);
       if (!decoded || !decoded.email) {
-
+      setUserEmail(decoded.email ?? null);
         return;
       }
     } catch (error) {
@@ -35,7 +36,18 @@ export default function Home() {
     }
   }, []);
 
-  const cards = [
+  const IPoemails=['ragini@excelsoftcorp.com',
+'shruthi.sudhanva@excelsoftcorp.com',
+'sudhanva@excelsoftcorp.com',
+'shiv@excelindia.com',
+'kulkarni@excelsoftcorp.com',
+'prashanth@excelsoftcorp.com',
+'adarsh@excelsoftcorp.com',
+'sridhar@excelindia.com',
+'ravi.s@excelsoftcorp.com',
+'mahesh.jambardi@excelsoftcorp.com']
+ if (useremail && IPoemails.includes(useremail)) {
+ const cards = [
     {
       imageSrc: 'https://img.freepik.com/free-photo/ai-technology-microchip-background-digital-transformation-concept_53876-124669.jpg',
       title: 'AskIT @ Excelsoft',
@@ -51,10 +63,26 @@ export default function Home() {
      {
       imageSrc: 'https://aiipo.z29.web.core.windows.net/assets/essupport.png',
       title: 'AskIPO @ Excelsoft',
-      description: 'You can ask questions like: About Excelsoft. Financial information. Legal and other information. Offer information',
+      description: 'You can ask questions like: About Excelsoft. Financial information. Legal and other information?. Offer information',
       id: "asst_7AlfSjb3EKVtakbS0BkQbN6F"
     },
   ];
+}else{
+   const cards = [
+    {
+      imageSrc: 'https://img.freepik.com/free-photo/ai-technology-microchip-background-digital-transformation-concept_53876-124669.jpg',
+      title: 'AskIT @ Excelsoft',
+      description: 'You can ask questions like: Summarise the Email Security Policy at Excelsoft. What is the password policy at Excelsoft? I lost my laptop, What should I do? Summarise the software licensing procedure at Excelsoft. Can I bring my personal laptop to office?',
+      id: "asst_TtG4o3YhcsEw8akn7mHUt2Xa"
+    },
+    {
+      imageSrc: 'https://cdn.pixabay.com/photo/2023/10/21/12/35/ai-generated-8331364_640.jpg',
+      title: 'AskHR @ Excelsoft',
+      description: 'You can ask questions like: Summarise the HR Policy for Career Enhancement at Excelsoft. How many casual leaves does an employee have at Excelsoft? Summarise the Leave Policy at Excelsoft.',
+      id: "asst_fRHxuw5UobxvFOBIAgl4WTWg"
+    }
+  ];
+}
 
   const handleCardClick = (item: any) => {
     setSelectedAssistant(item);
