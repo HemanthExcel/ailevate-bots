@@ -46,8 +46,9 @@ export default function Home() {
 'sridhar@excelindia.com',
 'ravi.s@excelsoftcorp.com',
 'mahesh.jambardi@excelsoftcorp.com']
+  let cards=[];
  if (useremail && IPoemails.includes(useremail)) {
- const cards = [
+  cards = [
     {
       imageSrc: 'https://img.freepik.com/free-photo/ai-technology-microchip-background-digital-transformation-concept_53876-124669.jpg',
       title: 'AskIT @ Excelsoft',
@@ -68,7 +69,7 @@ export default function Home() {
     },
   ];
 }else{
-   const cards = [
+    cards = [
     {
       imageSrc: 'https://img.freepik.com/free-photo/ai-technology-microchip-background-digital-transformation-concept_53876-124669.jpg',
       title: 'AskIT @ Excelsoft',
