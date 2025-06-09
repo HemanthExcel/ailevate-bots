@@ -26,6 +26,7 @@ export default function Home() {
 console.log("id_token", id_token);
     try {
       const decoded: IJwtObject = jwtDecode(id_token);
+      console.log("id_token", decoded);
       if (!decoded || !decoded.email) {
         console.log("id_token", decoded);
       setUserEmail(decoded.email ?? null);
