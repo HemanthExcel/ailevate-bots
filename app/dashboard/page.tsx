@@ -50,19 +50,19 @@ export default function Home() {
   cards = [
     {
       imageSrc: 'https://img.freepik.com/free-photo/ai-technology-microchip-background-digital-transformation-concept_53876-124669.jpg',
-      title: 'AskIT @ Excelsoft',
+      title: 'AskIT @ Excelsoft v1.0',
       description: 'You can ask questions like: Summarise the Email Security Policy at Excelsoft. What is the password policy at Excelsoft? I lost my laptop, What should I do? Summarise the software licensing procedure at Excelsoft. Can I bring my personal laptop to office?',
       id: "asst_TtG4o3YhcsEw8akn7mHUt2Xa"
     },
     {
       imageSrc: 'https://cdn.pixabay.com/photo/2023/10/21/12/35/ai-generated-8331364_640.jpg',
-      title: 'AskHR @ Excelsoft',
+      title: 'AskHR @ Excelsoft v1.0',
       description: 'You can ask questions like: Summarise the HR Policy for Career Enhancement at Excelsoft. How many casual leaves does an employee have at Excelsoft? Summarise the Leave Policy at Excelsoft.',
       id: "asst_fRHxuw5UobxvFOBIAgl4WTWg"
     },
      {
       imageSrc: 'https://aiipo.z29.web.core.windows.net/assets/essupport.png',
-      title: 'AskIPO @ Excelsoft',
+      title: 'AskIPO @ Excelsoft v1.0',
       description: 'You can ask questions like: About Excelsoft. Financial information. Legal and other information?. Offer information',
       id: "asst_7AlfSjb3EKVtakbS0BkQbN6F"
     },
@@ -71,13 +71,13 @@ export default function Home() {
     cards = [
     {
       imageSrc: 'https://img.freepik.com/free-photo/ai-technology-microchip-background-digital-transformation-concept_53876-124669.jpg',
-      title: 'AskIT @ Excelsoft',
+      title: 'AskIT @ Excelsoft v1.0',
       description: 'You can ask questions like: Summarise the Email Security Policy at Excelsoft. What is the password policy at Excelsoft? I lost my laptop, What should I do? Summarise the software licensing procedure at Excelsoft. Can I bring my personal laptop to office?',
       id: "asst_TtG4o3YhcsEw8akn7mHUt2Xa"
     },
     {
       imageSrc: 'https://cdn.pixabay.com/photo/2023/10/21/12/35/ai-generated-8331364_640.jpg',
-      title: 'AskHR @ Excelsoft',
+      title: 'AskHR @ Excelsoft v1.0',
       description: 'You can ask questions like: Summarise the HR Policy for Career Enhancement at Excelsoft. How many casual leaves does an employee have at Excelsoft? Summarise the Leave Policy at Excelsoft.',
       id: "asst_fRHxuw5UobxvFOBIAgl4WTWg"
     }
