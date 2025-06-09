@@ -20,17 +20,13 @@ export default function Home() {
     const id_token: string = Cookies.get("id_token") || '';
 
     if (!id_token) {
-
       return;
     }
-console.log("id_token", id_token);
     try {
       const decoded: IJwtObject = jwtDecode(id_token);
-      console.log("id_token", decoded);
       setUserEmail(decoded.email ?? '');
       if (!decoded || !decoded.email) {
-        console.log("id_token", decoded);
-      setUserEmail(decoded.email ?? '');
+        setUserEmail(decoded.email ?? '');
         return;
       }
     } catch (error) {
@@ -39,16 +35,16 @@ console.log("id_token", id_token);
     }
   }, []);
 
-  const IPoemails=['ragini@excelsoftcorp.com',
-'shruthi.sudhanva@excelsoftcorp.com',
-'sudhanva@excelsoftcorp.com',
+  const IPoemails=['ragini@excelindia.com',
+'shruthi.sudhanva@excelindia.com',
+'sudhanva@excelindia.com',
 'shiv@excelindia.com',
-'kulkarni@excelsoftcorp.com',
-'prashanth@excelsoftcorp.com',
-'adarsh@excelsoftcorp.com',
+'kulkarni@excelindia.com',
+'prashanth@excelindia.com',
+'adarsh@excelindia.com',
 'sridhar@excelindia.com',
-'ravi.s@excelsoftcorp.com',
-'mahesh.jambardi@excelsoftcorp.com']
+'ravi.s@excelindia.com',
+'mahesh.jambardi@excelindia.com']
   let cards=[];
  if (useremail && IPoemails.includes(useremail)) {
   cards = [
