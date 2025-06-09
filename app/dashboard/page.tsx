@@ -14,7 +14,7 @@ interface IJwtObject {
 export default function Home() {
   const [selectedAssistant, setSelectedAssistant] = useState<any | null>(null);
   const [showCards, setShowCards] = useState(true);
-    const [useremail, setUserEmail] = useState(string);
+    const [useremail, setUserEmail] = useState('');
 
   useEffect(() => {
     const id_token: string = Cookies.get("id_token") || '';
