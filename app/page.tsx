@@ -3,7 +3,6 @@ import { Suspense, useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import axios from "axios";
 import { useSearchParams } from 'next/navigation';
-import { Analytics } from '@vercel/analytics/react';
 import Dashboard from "./dashboard/page";
 
 export default function Homecontent() {
@@ -12,7 +11,6 @@ export default function Homecontent() {
       <Suspense fallback={<div>Loading...</div>}>
         <Home />
       </Suspense>
-       <Analytics />
     </main>
   );
 }
