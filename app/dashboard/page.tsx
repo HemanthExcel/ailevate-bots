@@ -44,7 +44,8 @@ export default function Home() {
 'adarsh@excelindia.com',
 'sridhar@excelindia.com',
 'ravi.s@excelindia.com',
-'mahesh.jambardi@excelindia.com']
+'mahesh.jambardi@excelindia.com',
+'adarsh.mysore@excelindia.com']
   let cards=[];
  if (useremail && IPoemails.includes(useremail)) {
   cards = [
