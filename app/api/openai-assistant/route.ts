@@ -36,11 +36,12 @@ export async function POST(request:NextRequest) {
     );
     
    // return new Response(stream.toReadableStream());
-      return new Response(stream.toReadableStream(), {
+     return new Response(stream.toReadableStream(), {
     headers: {
       'Content-Type': 'text/event-stream',
       'Access-Control-Allow-Origin': 'https://ailevatebots.z29.web.core.windows.net',
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
-    }
+    },
+  });
 }
