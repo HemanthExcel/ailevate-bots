@@ -82,6 +82,13 @@ export default function Home() {
       description: 'You can ask questions like: Summarise the HR Policy for Career Enhancement at Excelsoft. How many casual leaves does an employee have at Excelsoft? Summarise the Leave Policy at Excelsoft.',
       id: "asst_fRHxuw5UobxvFOBIAgl4WTWg"
     }
+      ,
+     {
+      imageSrc: 'https://aiipo.z29.web.core.windows.net/assets/essupport.png',
+      title: 'AskIPO @ Excelsoft v1.0',
+      description: 'You can ask questions like: About Excelsoft. Financial information. Legal and other information?. Offer information',
+      id: "asst_MP1jX4AvmSTQbw41f0b8H2qF"
+    }
   ];
 }
 
@@ -126,3 +133,4 @@ export default function Home() {
     </main>
   );
 }
+
